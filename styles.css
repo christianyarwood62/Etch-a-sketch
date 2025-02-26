@@ -1,0 +1,15 @@
+.grid-container {
+    background-color: grey;
+    height: 740px;
+    width: 740px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-square {
+    background-color: lightblue;
+    border-style: solid;
+    border-color: black;
+    box-sizing: border-box;
+    display: flex;
+}
