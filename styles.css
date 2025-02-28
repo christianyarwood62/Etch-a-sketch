@@ -18,7 +18,7 @@ body {
 }
 
 .grid-square {
-    background-color: lightblue;
+    background-color: white;
     border-style: solid;
     border-color: black;
     box-sizing: border-box;
