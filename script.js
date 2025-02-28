@@ -24,6 +24,8 @@ startbtn.classList.add('start-button');
 startbtn.textContent = 'Make a Grid';
 buttonContainer.appendChild(startbtn);
 
+makeGrid(10);
+
 // Make a grid of size by size numbers of squares with a fixed grid container size.
 function makeGrid(size) {
     gridContainer.style.width = '400px';
@@ -36,10 +38,8 @@ function makeGrid(size) {
         square.classList.add('grid-square');
         gridContainer.appendChild(square);
         square.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = 'red';
-        })
-        square.addEventListener('mouseout', (e) => {
-            e.target.style.backgroundColor = 'lightblue';
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            e.target.style.backgroundColor = '#' + randomColor;
         })
     }
 }
