@@ -1,3 +1,4 @@
+// Select the html containers
 const gridContainer = document.querySelector('.grid-container');
 const buttonContainer = document.querySelector('.button-container');
 
@@ -23,6 +24,7 @@ startbtn.classList.add('start-button');
 startbtn.textContent = 'Make a Grid';
 buttonContainer.appendChild(startbtn);
 
+// Make a grid of size by size numbers of squares with a fixed grid container size.
 function makeGrid(size) {
     gridContainer.style.width = '740px';
     gridContainer.style.height = '740px';
@@ -31,21 +33,22 @@ function makeGrid(size) {
         const square = document.createElement('div');
         square.style.height = adjustedSize + 'px';
         square.style.width = adjustedSize + 'px';
-        
         square.classList.add('grid-square');
         gridContainer.appendChild(square);
     }
 }
 
+// Empty the current grid
 function restartGrid() {
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
-    // makeGrid(4);
 }
 
+// Ask user for size of grid, delete the current grid and replace with new size
 const startButton = document.querySelector('.start-button');
 startButton.addEventListener('click', () => {
     const userInput = prompt('What size grid would you like?');
+    restartGrid();
     makeGrid(userInput);
 })
