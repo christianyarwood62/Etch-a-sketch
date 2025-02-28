@@ -16,10 +16,11 @@ function makeGrid(size) {
     }
 }
 */
+
 // Create a button, add it to a class and add text
 startButton = document.createElement('button');
 startButton.classList.add('start-button');
-startButton.textContent = 'test';
+startButton.textContent = 'Make a Grid';
 buttonContainer.appendChild(startButton);
 
 function makeGrid(size) {
