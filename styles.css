@@ -1,9 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
 .grid-container {
     background-color: grey;
-    height: 740px;
-    width: 740px;
+    /* height: 740px;
+    width: 740px; */
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
 .grid-square {
@@ -12,5 +23,13 @@
     border-color: black;
     box-sizing: border-box;
     display: flex;
-    border-width: 1px;
+    border-width:50%;
+}
+
+.start-button {
+    /* background-color: red; */
+    width: auto;
+    height: auto;
+    align-self: center;
+    margin-top: 36px;
 }
