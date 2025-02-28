@@ -48,7 +48,15 @@ function restartGrid() {
 // Ask user for size of grid, delete the current grid and replace with new size
 const startButton = document.querySelector('.start-button');
 startButton.addEventListener('click', () => {
-    const userInput = prompt('What size grid would you like?');
-    restartGrid();
-    makeGrid(userInput);
+    let userInput = prompt('What size grid would you like?');
+    Number(userInput);
+    // const errorMessage = document.createElement('div');
+    if (userInput > 0) {
+        console.log(typeof(userInput))
+        gridContainer.style.display = 'flex';
+        restartGrid();
+        makeGrid(userInput);
+    } else {
+        alert('Please enter a valid number')
+    }
 })
