@@ -1,7 +1,13 @@
 body {
     display: flex;
     flex-direction: column;
-    gap: 40px
+    gap: 20px
+}
+
+h1 {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px;
 }
 .grid-container {
     background-color: grey;
@@ -34,5 +40,25 @@ body {
     width: auto;
     height: auto;
     align-self: center;
-    margin-top: 36px;
+}
+
+.color-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#red-button {
+    background-color: red;
+}
+
+#blue-button {
+    background-color: blue;
+}
+
+#yellow-button {
+    background-color: yellow;
+}
+
+#green-button {
+    background-color: green;
 }

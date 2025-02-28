@@ -1,6 +1,7 @@
 // Select the html containers
 const gridContainer = document.querySelector('.grid-container');
 const buttonContainer = document.querySelector('.button-container');
+const colorButtonsContainer = document.querySelector('.color-buttons-container');
 
 /* I tried writing a dynamic grid that changes with screen size.
 I managed to dynamically change the container size, but the gris squares stay the same
