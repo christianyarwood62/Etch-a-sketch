@@ -27,3 +27,10 @@ function makeGrid(size) {
         gridContainer.appendChild(square);
     }
 }
+
+function restartGrid() {
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+    // makeGrid(4);
+}
