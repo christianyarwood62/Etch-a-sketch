@@ -18,10 +18,10 @@ function makeGrid(size) {
 */
 
 // Create a button, add it to a class and add text
-startButton = document.createElement('button');
-startButton.classList.add('start-button');
-startButton.textContent = 'Make a Grid';
-buttonContainer.appendChild(startButton);
+startbtn = document.createElement('button');
+startbtn.classList.add('start-button');
+startbtn.textContent = 'Make a Grid';
+buttonContainer.appendChild(startbtn);
 
 function makeGrid(size) {
     gridContainer.style.width = '740px';
@@ -43,3 +43,9 @@ function restartGrid() {
     }
     // makeGrid(4);
 }
+
+const startButton = document.querySelector('.start-button');
+startButton.addEventListener('click', () => {
+    const userInput = prompt('What size grid would you like?');
+    makeGrid(userInput);
+})
