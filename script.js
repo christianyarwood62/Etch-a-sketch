@@ -26,8 +26,8 @@ buttonContainer.appendChild(startbtn);
 
 // Make a grid of size by size numbers of squares with a fixed grid container size.
 function makeGrid(size) {
-    gridContainer.style.width = '740px';
-    gridContainer.style.height = '740px';
+    gridContainer.style.width = '400px';
+    gridContainer.style.height = '400px';
     const adjustedSize = (gridContainer.getBoundingClientRect().height) / size;
     for (let i = 0; (i < size * size); i++) {
         const square = document.createElement('div');

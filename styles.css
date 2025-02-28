@@ -23,7 +23,7 @@ body {
     border-color: black;
     box-sizing: border-box;
     display: flex;
-    border-width:50%;
+    border-width: 0.5px;
 }
 
 .start-button {
