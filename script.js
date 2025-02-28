@@ -25,8 +25,6 @@ startbtn.classList.add('start-button');
 startbtn.textContent = 'Make a Grid';
 buttonContainer.appendChild(startbtn);
 
-makeGrid(10);
-
 // Make a grid of size by size numbers of squares with a fixed grid container size.
 function makeGrid(size) {
     gridContainer.style.width = '400px';
@@ -57,7 +55,6 @@ startButton.addEventListener('click', () => {
     Number(userInput);
     // const errorMessage = document.createElement('div');
     if (userInput > 0) {
-        console.log(typeof(userInput))
         gridContainer.style.display = 'flex';
         restartGrid();
         makeGrid(userInput);
@@ -66,19 +63,53 @@ startButton.addEventListener('click', () => {
     }
 })
 
+// Select all buttons that change color of sketch 
+blackButton = document.querySelector('#black-button');
+redButton = document.querySelector('#red-button');
+blueButton = document.querySelector('#blue-button');
+yellowButton = document.querySelector('#yellow-button');
+greenButton = document.querySelector('#green-button');
+let chosenColor = 'black';
+
+blackButton.addEventListener('click', () => {
+    chosenColor = 'black';
+    opacity = 5;
+})
+redButton.addEventListener('click', () => {
+    chosenColor = 'red';
+    opacity = 5;
+})
+blueButton.addEventListener('click', () => {
+    chosenColor = 'blue';
+    opacity = 5;
+})
+yellowButton.addEventListener('click', () => {
+    chosenColor = 'yellow';
+    opacity = 5;
+})
+greenButton.addEventListener('click', () => {
+    chosenColor = 'green';
+    opacity = 5;
+})
+
+// Adds a hover event to add a color and increasing opacity
 function addEventListenersToSquares() {
     let gridBoxes = document.querySelectorAll('.grid-square');
     gridBoxes.forEach(box => {
-        let opacity = 0;
-        box.addEventListener('mouseenter', () => {
-            box.style.backgroundColor = 'red';
+        let opacity = 5;
+        box.addEventListener('mouseover', () => {
+            const colorButtons = document.querySelectorAll('.color-buttons');
+            colorButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    opacity = 5;
+                })
+            })
+            box.style.backgroundColor = chosenColor;
             opacity += 15;
             box.style.opacity = `${opacity}%`;
         })
     });
 }
 
-    // sqr.addEventListener('mouseover', (e) => {
-    //     const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    //     e.target.style.backgroundColor = '#' + randomColor;
-    // })
+// Make a starting grid of 10 x 10 size
+makeGrid(10);
