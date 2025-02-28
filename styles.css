@@ -26,6 +26,10 @@ body {
     border-width: 0.5px;
 }
 
+.hovered-square {
+    background-color: red;
+}
+
 .start-button {
     width: auto;
     height: auto;

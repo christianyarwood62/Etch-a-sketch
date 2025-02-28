@@ -35,6 +35,12 @@ function makeGrid(size) {
         square.style.width = adjustedSize + 'px';
         square.classList.add('grid-square');
         gridContainer.appendChild(square);
+        square.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'red';
+        })
+        square.addEventListener('mouseout', (e) => {
+            e.target.style.backgroundColor = 'lightblue';
+        })
     }
 }
 
